@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <AbsoluteLayout
+        android:layout_width="fill_parent"
+        android:layout_height="172dp" >
+
+        <Button
+            android:id="@+id/sound_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_x="221dp"
+            android:layout_y="2dp"
+            android:text="Sound" />
+
+        <TextView
+            android:id="@+id/word_textview_id"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_x="0dp"
+            android:layout_y="47dp"
+            android:gravity="center"
+            android:text="WORD"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/partsofspc_textview_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="18dp"
+            android:layout_y="10dp"
+            android:text="PartsOfSpeece"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	</AbsoluteLayout>
+    
+    	<TabHost
+    	    android:id="@+id/wordMenu_tabHost_id"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="234dp" >
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="239dp"
+	        android:orientation="vertical"
+	         >
+	
+	        <FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="311dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.70" >
+	             <LinearLayout
+                    android:id="@+id/Definition"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp" >
+
+                    <TextView
+                        android:id="@+id/definition_textView_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Definition"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Synonyms"
+                   	
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <TextView
+                        android:id="@+id/synonyms_textView_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Synonyms"
+                        android:textAppearance="?android:attr/textAppearanceMedium" 
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Examples"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+               		 <TextView
+                        android:id="@+id/examples_textView_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="examples"
+                        android:textAppearance="?android:attr/textAppearanceMedium" 
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+               		<EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textMultiLine" >
+
+                        <requestFocus />
+                    </EditText>
+               		 
+                </LinearLayout>
+            </FrameLayout>
+
+	        <TabWidget
+	            android:id="@android:id/tabs"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="-4dp"
+	            android:layout_weight="0" >
+	        </TabWidget>
+	
+	    </LinearLayout>
+	
+	</TabHost>
+
+    	<RatingBar
+    	    android:id="@+id/level_ratingbar_id"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content" 
+    	    android:numStars="3" 
+    	    android:layout_gravity="center"/>
+
+</LinearLayout>
